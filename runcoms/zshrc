@@ -10,4 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/dotfiles/prezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/dotfiles/prezto/init.zsh"
 fi
 
-# Customize to your needs...
+SAVED_ZSHRC="$HOME/dotfiles/zshrc"
+source $SAVED_ZSHRC
+
+LOCAL_ZSHRC="$HOME/.local_zshrc"
+if [ -f $LOCAL_ZSHRC ]; then
+    source $LOCAL_ZSHRC
+fi
